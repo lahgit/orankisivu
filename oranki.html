@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sivusto</title>
+</head>
+
+
+<style>
+img{
+  padding:20px;
+}
+
+body{
+  background-color:chocolate
+}
+
+.nappi {
+  border: none;
+  color: blueviolet;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px black;
+}
+
+
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:white;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  font-size: 80px;
+}
+
+
+</style>
+
+
+<body>
+
+  <h1> Oranki.jpg </h1>
+  <button type="button" class="nappi" id="buttonz">Resize</button>
+
+  <h2>_______________________________________________</h2>
+
+<img src="oranki.jpg" border="" height="200" width="200" class="oranki">
+
+<p></p>
+
+<script>
+
+/*
+taulu = [[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1],[0,1,0,1,0,1,0,1,0,1]]
+console.log(taulu)
+
+for(y=0;y<10;y++){
+  for(x=0;x<10;x++){
+    document.write(taulu[x][y] + " ");
+  }
+  document.write("<br>")
+  
+}
+*/
+console.log(Math.round(Math.random()*10 +1))
+
+myFunction = function(){
+  korkeuss = Number(prompt("Kerro oranki kuvan pituus"));
+  leveyss = Number(prompt("Kerro oranki kuvan leveys"));
+  document.querySelector(".oranki").style.height = `${korkeuss}px`
+  document.querySelector(".oranki").style.width = `${leveyss}px`
+}
+
+myFunction2 = function(){
+  document.querySelector(".nappi").style.color = "purple"
+}
+
+myFunction3 = function(){
+  document.querySelector(".nappi").style.color = "blueviolet"
+}
+
+
+
+document.getElementById("buttonz").addEventListener("click", myFunction)
+document.getElementById("buttonz").addEventListener("mouseover", myFunction2)
+document.getElementById("buttonz").addEventListener("mouseout", myFunction3)
+
+</script>
+
+
+</body>
+</html>
